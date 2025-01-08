@@ -1,0 +1,59 @@
+JavaScript operators:
+	1. Arithmetic: +, -, *, /, %, **, ++, --
+	<body>
+    	   <script>
+        	let a=5
+        	let b=10
+        	document.write(b%a, "<br>")
+        	document.write(b/a, "<br>")
+        	document.write(b**a, "<br>")
+        	a++
+        	document.write(a, "<br>")
+        	b--
+        	document.write(b)
+    	   </script>
+	</body>
+
+	2. Assignment: =, +=, -=
+	let a=5
+        let b=10
+        a+=20
+        document.write(a, "<br>")
+        b-=2
+        document.write(b)
+
+	3. Logical: and(&&), or(||), not(!)
+	let a=5
+        let b=10
+        document.write(a>b && a>10, "<br>")
+        document.write(a>b || a>10, "<br>")
+        document.write(a!=b )
+
+	4. Relational: >, <, ==, !=, <=, >=, ===, !==
+	let a=10
+        let b='10'
+        document.write(a==b, "<br>")
+        document.write(a===b, "<br>")
+        document.write(a!==b, "<br>")
+        document.write(a!=b, "<br>")
+        document.write(a<=b, "<br>")
+        document.write(a<b, "<br>")
+
+	5. Conditional: Ternary (?)
+	let a=10
+        let b=(a>10) ? "Ac-off":"AC-on"
+        document.write(b)
+
+Window Methods:
+	1. alert()
+	alert("OH NO!!")
+        console.log(alert)
+
+	2. prompt()
+	let name=prompt("Enter alert message")
+        alert(name)
+	
+	let a=prompt()
+        let b=prompt()
+        document.write(typeof(a))
+        console.log(a+b)
