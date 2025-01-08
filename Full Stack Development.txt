@@ -1,0 +1,26 @@
+Full Stack Development:
+ End-to-End application development.
+ 1) Front end
+ 2) Back end
+ 3) Databases
+
+1)Front end:- User interface; visible part of application
+  -HTML: Hypertext markup language
+	text - content
+	hypertext - text with multiple links
+	markup - consists tags to create content on website
+	--HTML is used to create structure of the contents that are displayed in an application
+
+  -CSS: Cascading Style Sheet
+	--used to add style to website; make website to look attractive
+	1.font    	4.shape
+	2.color   	5.size         
+	3.position	6.etc.
+	
+  -Java Script: used to create dynamic websites; form validations
+	1.static websites: interface remains constant for everyone
+	2.dynamic websites: changes depending on the user
+
+  -React Js: 
+
+
