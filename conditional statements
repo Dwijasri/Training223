@@ -1,0 +1,40 @@
+Conditional Statements:
+	executing the instructions only when the given condition is true. used to decide whether the condition is 	executed or skipped.
+	Block of code: set of instructions
+	Condition: an expression that evaluates a result
+	Methods: if, if-else, else if, switch, ternary
+	1. if:
+		if(condition){
+			block of code
+		}
+	Example: positive condition
+	let a=4
+        let b=5
+        if(a<b){
+            document.write("Yay!!","<br>")
+        }
+        document.write("Execute Anyway")
+	
+	Example: negative condition
+	let a=4
+        let b=5
+        if(a>b){
+            document.write("Yay!!","<br>")
+        }
+        document.write("Execute Anyway")
+
+Q)Write a program that reads the scores A and B of two players and checks if one of the scores is greater than 300 and sum of the scores is less than 500.
+
+Input: the first line of input contains an integer representing the score A. and the second line of input contains an integer representing the score B.
+
+Output: the output should be a single line containing a string
+
+Code:
+let a= prompt("Score of A: ")
+        let b= prompt("Score of B: ")
+        let c=a+b
+        if(a>300 || b>300 && c<500){
+            alert("Can team up")
+        }else{
+            alert("Cannot team up")
+        }
