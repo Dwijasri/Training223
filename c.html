@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.Write a program to check whether the number is divisible by 2 and 3 and both (take prompt)
+        // let a= prompt("Enter number: ")
+        // if(a%2==0 && a%3==0){
+        //     alert(a+" is divisible by 2 and 3")
+        // }else if(a%2==0){
+        //     alert(a+" is divisible by 2")
+        // }else if(a%3==0){
+        //     alert(a+" is divisible by 3")
+        // }else{
+        //     alert(a+" is not divisible by 2 and 3")
+        // }
+
+        // 2. Write a program to find the largest number of the three numbers 
+        // let a=parseInt(prompt("Enter num 1"))
+        // let b=parseInt(prompt("Enter num 2"))
+        // let c=parseInt(prompt("Enter num 3"))
+        // if(a>b && a>c){
+        //     alert(a+" is the largest")
+        // }else if(b>a && b>c){
+        //     alert(b+" is the largest")
+        // }else{
+        //     alert(c+" is the largest")
+        // }
+
+        // 3. Accept the following from the user and calculate the percentage of classes attended
+	    // a) total number of working days
+	    // b) total number of days of absence
+        // After calculating percentage show that, if the percentage is less than 75, then student will not
+        // be eligible to write exam.
+        // let working_days=parseInt(prompt("Enter the number of working days"))
+        // let absence=parseInt(prompt("Enter the number of days of absence"))
+        // let presence=working_days-absence
+        // let percentage=(presence/working_days)*100
+        // if(percentage>=75){
+        //     alert("You are eligible for writing exam")
+        // }else{
+        //     alert("You are not eligible for writing the exam")
+        // }
+
+        // 4. A company decided to give bonus to employee according to the following criteria:
+	    // time 				bonus
+	    // more than 10 years		10%
+	    // >=6 years and <=10		8%
+	    // less the 6			5%
+        // ask the user for their salary and years of experience and print the bonus amount
+        let salary=parseInt(prompt("Enter salary"))
+        let years=parseInt(prompt("Enetr years"))
+        
+        if(years>10){
+            let b=salary*10/100
+            let bonus=b+salary
+            alert("Your current salary is "+salary+" your salary with bonus is "+bonus)
+            
+        }else if(years>=6 && years<=10){
+            let b=salary*8/100
+            let bonus=b+salary
+            alert("Your current salary is "+salary+" your salary with bonus is "+bonus)
+            
+        }else{
+            let b=salary*6/100
+            let bonus=b+salary
+            alert("Your current salary is "+salary+" your salary with bonus is "+bonus)
+        }
+    </script>
+</body>
+</html>

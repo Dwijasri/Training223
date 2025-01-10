@@ -4,6 +4,9 @@ Full Stack Development:
  2) Back end
  3) Databases
 
+
+DAY 1:
+
 1)Front end:- User interface; visible part of application
   -HTML: Hypertext markup language
 	text - content
@@ -21,6 +24,208 @@ Full Stack Development:
 	1.static websites: interface remains constant for everyone
 	2.dynamic websites: changes depending on the user
 
-  -React Js: 
+DAY 2:
+JavaScript: scripting language; high level programming language; weakly/loosely typed language; lightweight and dynamic language; used to build user interface.
+- introduced in 1995 by Brenden eich; Netscape navigator; first js program was developed within 7-8 days with the name mocha.
+- applications: mobile, smartwatch, web apps, server side apps, gaming
+
+Types of variables in JS: var, let, const. 
+
+
+Day 3:
+Variables:- 
+	1. Case-sensitive
+	2. start with letters, _(under score), $(dollar)
+	3. cannot start with numbers
+	4. Reserved(key) words are not allowed
+	5. Allow letters, numbers, underscore, dollar
+	a. Reassigning variables with var is accepted
+	b. Reassigning with let is accepted
+	c. Reassigning with const is not accepted
+	i. Redeclaring with var is accepted
+	ii. redeclaring with let is not accepted
+	iii. Redeclaring with const is not accepted
+
+Block Scope:
+	1. Variables declared with var do not have block scope
+	2. Variables declared with let have block scope
+
+
+Day 5:
+JavaScript operators:
+	1. Arithmetic: +, -, *, /, %, **, ++, --
+	<body>
+    	   <script>
+        	let a=5
+        	let b=10
+        	document.write(b%a, "<br>")
+        	document.write(b/a, "<br>")
+        	document.write(b**a, "<br>")
+        	a++
+        	document.write(a, "<br>")
+        	b--
+        	document.write(b)
+    	   </script>
+	</body>
+
+	2. Assignment: =, +=, -=
+	let a=5
+        let b=10
+        a+=20
+        document.write(a, "<br>")
+        b-=2
+        document.write(b)
+
+	3. Logical: and(&&), or(||), not(!)
+	let a=5
+        let b=10
+        document.write(a>b && a>10, "<br>")
+        document.write(a>b || a>10, "<br>")
+        document.write(a!=b )
+
+	4. Relational: >, <, ==, !=, <=, >=, ===, !==
+	let a=10
+        let b='10'
+        document.write(a==b, "<br>")
+        document.write(a===b, "<br>")
+        document.write(a!==b, "<br>")
+        document.write(a!=b, "<br>")
+        document.write(a<=b, "<br>")
+        document.write(a<b, "<br>")
+
+	5. Conditional: Ternary (?)
+	let a=10
+        let b=(a>10) ? "Ac-off":"AC-on"
+        document.write(b)
+
+Window Methods:
+	1. alert()
+	alert("OH NO!!")
+        console.log(alert)
+
+	2. prompt()
+	let name=prompt("Enter alert message")
+        alert(name)
+	
+	let a=prompt()
+        let b=prompt()
+        document.write(typeof(a))
+        console.log(a+b)
+
+Day 6: 
+
+Conditional Statements:
+	executing the instructions only when the given condition is true. used to decide whether the condition is 	executed or skipped.
+	Block of code: set of instructions
+	Condition: an expression that evaluates a result
+	Methods: if, if-else, else if, switch, ternary
+	1. if:
+		if(condition){
+			block of code
+		}
+	Example: positive condition
+	let a=4
+        let b=5
+        if(a<b){
+            document.write("Yay!!","<br>")
+        }
+        document.write("Execute Anyway")
+	
+	Example: negative condition
+	let a=4
+        let b=5
+        if(a>b){
+            document.write("Yay!!","<br>")
+        }
+        document.write("Execute Anyway")
+
+Q)Write a program that reads the scores A and B of two players and checks if one of the scores is greater than 300 and sum of the scores is less than 500.
+
+Input: the first line of input contains an integer representing the score A. and the second line of input contains an integer representing the score B.
+
+Output: the output should be a single line containing a string
+
+Code:
+let a= prompt("Score of A: ")
+        let b= prompt("Score of B: ")
+        let c=a+b
+        if(a>300 || b>300 && c<500){
+            alert("Can team up")
+        }else{
+            alert("Cannot team up")
+        }
+
+Day 7:
+
+Program solving with JavaScript:
+
+1. Write a program to check whether the number is divisible by 2 and 3 and both (take prompt)
+
+let a= prompt("Enter number: ")
+        let a= prompt("Enter number: ")
+        if(a%2==0 && a%3==0){
+            alert(a+" is divisible by 2 and 3")
+        }else if(a%2==0){
+            alert(a+" is divisible by 2")
+        }else if(a%3==0){
+            alert(a+" is divisible by 3")
+        }else{
+            alert(a+" is not divisible by 2 and 3")
+        }
+
+2. Write a program to find the largest number of the three numbers 
+
+let a=parseInt(prompt("Enter num 1"))
+        let b=parseInt(prompt("Enter num 2"))
+        let c=parseInt(prompt("Enter num 3"))
+        if(a>b && a>c){
+            alert(a+" is the largest")
+        }else if(b>a && b>c){
+            alert(b+" is the largest")
+        }else{
+            alert(c+" is the largest")
+        }
+
+3. Accept the following from the user and calculate the percentage of classes attended
+	a) total number of working days
+	b) total number of days of absence
+   After calculating percentage show that, if the percentage is less than 75, then student will not
+   be eligible to write exam.
+
+let working_days=parseInt(prompt("Enter the number of working days"))
+        let absence=parseInt(prompt("Enter the number of days of absence"))
+        let presence=working_days-absence
+        let percentage=(presence/working_days)*100
+        if(percentage>=75){
+            alert("You are eligible for writing exam")
+        }else{
+            alert("You are not eligible for writing the exam")
+        }
+
+4. A company decided to give bonus to employee according to the following criteria:
+	time 				bonus
+	more than 10 years		10%
+	>=6 years and <=10		8%
+	less the 6			5%
+   ask the user for their salary and years of experience and print the bonus amount
+
+let salary=parseInt(prompt("Enter salary"))
+        let years=parseInt(prompt("Enetr years"))
+        
+        if(years>10){
+            let b=salary*10/100
+            let bonus=b+salary
+            alert("Your current salary is "+salary+" your salary with bonus is "+bonus)
+            
+        }else if(years>=6 && years<=10){
+            let b=salary*8/100
+            let bonus=b+salary
+            alert("Your current salary is "+salary+" your salary with bonus is "+bonus)
+            
+        }else{
+            let b=salary*6/100
+            let bonus=b+salary
+            alert("Your current salary is "+salary+" your salary with bonus is "+bonus)
+        }
 
 
