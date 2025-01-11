@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let num=parseInt(prompt("Enter a number"))
+        // switch(true){
+        //     case num>0:
+        //         alert("number is positive")
+        //         break;
+        //     case num==0:
+        //         alert("number is zero")
+        //         break;
+        //     case num<0:
+        //         alert("number is negative")
+        //         break;
+        //     default:
+        //         alert("invalid input")
+                
+        // }
+
+        // let day=prompt("enter day")
+        // switch(true){
+        //     case day=="sunday":
+        //         alert("weekend")
+        //         break
+        //     case day=="monday":
+        //         alert("weekday")
+        //         break
+        //     case day=="tuesday":
+        //         alert("weekday")
+        //         break
+        //     case day=="wednesday":
+        //         alert("weekday")
+        //         break
+        //     case day=="thursday":
+        //         alert("weekday")
+        //         break
+        //     case day=="friday": 
+        //         alert("weekend")
+        //         break
+        //     case day=="saturday": 
+        //         alert("weekend")
+        //         break
+        //     default:
+        //         alert("invalid")
+        // }
+
+        // let u=parseInt(prompt("Enter number of units"))
+        // let c=0
+        // if(u<=50 && u>=0){
+        //     c=u*2
+        // }else if(u<=150 && u>50){
+        //     c=(50*2)+(u-50)*3
+        // }else if(u<=250 && u>150){
+        //     c=(50*2)+(100*3)+(u-150)*5
+        // }else if(u>=250){
+        //     c=(50*2)+(100*3)+(100*5)+(u-250)*8
+        // }
+        // c=c + (c*0.2)
+        // document.write(c)
+
+        let n = prompt("enter number of students")
+        let count=0
+        for(let i=1; i<=n; i++){
+            let hs=n-i
+            count=count+hs
+        }
+        document.write(count)
+    </script>
+</body>
+</html>
