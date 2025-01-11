@@ -1,0 +1,54 @@
+Switch case:
+
+let num=parseInt(prompt("Enter a number"))
+        switch(true){
+            case num>0:
+                alert("number is positive")
+                break;
+            case num==0:
+                alert("number is zero")
+                break;
+            case num<0:
+                alert("number is negative")
+                break;
+            default:
+                alert("invalid input")
+                
+        }
+
+Q) The charges per unit for different ranges:
+	0-50 units - 2
+	51-150 units - 3
+	151-250 units - 5
+	250 and above units - 8
+
+#450
+50 - 50*2=100
+100 - 100*3=300
+100 - 100*5=500
+200 - 200*8=1600
+bill=2500
+total=2500 + (2500*0.2) = 3000
+
+let u=parseInt(prompt("Enter number of units"))
+        let c=0
+        if(u<=50 && u>=0){
+            c=u*2
+        }else if(u<=150 && u>50){
+            c=(50*2)+(u-50)*3
+        }else if(u<=250 && u>150){
+            c=(50*2)+(100*3)+(u-150)*5
+        }else if(u>=250){
+            c=(50*2)+(100*3)+(100*5)+(u-250)*8
+        }
+        c=c + (c*0.2)
+        document.write(c)
+
+Q) number of class students. everyone shake hands. count of handshakes
+let n = prompt("enter number of students")
+        let count=0
+        for(let i=1; i<=n; i++){
+            let hs=n-i
+            count=count+hs
+        }
+        document.write(count)
