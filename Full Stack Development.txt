@@ -227,5 +227,135 @@ let salary=parseInt(prompt("Enter salary"))
             let bonus=b+salary
             alert("Your current salary is "+salary+" your salary with bonus is "+bonus)
         }
+Day 8:
+
+Switch case:
+
+let num=parseInt(prompt("Enter a number"))
+        switch(true){
+            case num>0:
+                alert("number is positive")
+                break;
+            case num==0:
+                alert("number is zero")
+                break;
+            case num<0:
+                alert("number is negative")
+                break;
+            default:
+                alert("invalid input")
+                
+        }
+
+Q) The charges per unit for different ranges:
+	0-50 units - 2
+	51-150 units - 3
+	151-250 units - 5
+	250 and above units - 8
+
+#450
+50 - 50*2=100
+100 - 100*3=300
+100 - 100*5=500
+200 - 200*8=1600
+bill=2500
+total=2500 + (2500*0.2) = 3000
+
+let u=parseInt(prompt("Enter number of units"))
+        let c=0
+        if(u<=50 && u>=0){
+            c=u*2
+        }else if(u<=150 && u>50){
+            c=(50*2)+(u-50)*3
+        }else if(u<=250 && u>150){
+            c=(50*2)+(100*3)+(u-150)*5
+        }else if(u>=250){
+            c=(50*2)+(100*3)+(100*5)+(u-250)*8
+        }
+        c=c + (c*0.2)
+        document.write(c)
+
+Q) number of class students. everyone shake hands. count of handshakes
+let n = prompt("enter number of students")
+        let count=0
+        for(let i=1; i<=n; i++){
+            let hs=n-i
+            count=count+hs
+        }
+        document.write(count)
 
 
+Day 9:
+Loops:
+ 1. for
+	syntax:- for(initialization; condition; updation){
+		 block of code }
+
+	example:- for(let i =10; i<=15; i++){
+            		document.write(i+" ","<br>")
+        	  }
+
+	example:- for(let i=2; i<=9; i=i+2){
+            		document.write(i+3, "<br>")
+        	  }
+			//i=2 ; 4 ; 6 ; 8 ; 10 
+        		//c= 2<=9 ; 4<=9 ; 6<=9 ; 8<=9 ; 10 not <=9
+        		//u= i+2= 2+2=4 ; 4+2=6 ; 6+2=8 ; 8+2=10
+        		//b= i+3= 2+3=5 ; 4+3=7 ; 6+3=9 ; 8+3=11
+        		//output = 5 7 9 11
+
+
+	Q) repeat 5 times
+
+		var a="Twin crowns"
+        for(let i=1; i<=5; i++){
+            document.write(a, "<br>")
+        }
+
+	output:- Twin crowns
+		 Twin crowns
+		 Twin crowns
+		 Twin crowns
+		 Twin crowns	
+
+
+	Q)print 9 table
+
+		let n=9
+        for(let i=1; i<=10; i++){
+            document.write("9 x "+i+" ="+n*i,"<br>")
+        }
+
+	output:- 9 x 1 =9
+		 9 x 2 =18
+		 9 x 3 =27
+		 9 x 4 =36
+		 9 x 5 =45
+		 9 x 6 =54
+		 9 x 7 =63
+		 9 x 8 =72
+		 9 x 9 =81
+		 9 x 10 =90
+	
+	Q) add nums in array
+	
+		const numbers=[1,2,3,4,5]
+        let a=0
+        for(let i=0; i<numbers.length; i++){
+            a=a+numbers[i]
+            document.write(a,"<br>")
+        }
+        document.write("final output: "+a)
+
+	output:- 1
+		 3
+		 6
+		 10
+		 15
+		 final output: 15
+
+
+ 2. for in
+ 3. for of
+ 4. while
+ 5. do while
