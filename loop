@@ -1,0 +1,84 @@
+2. for in :- to iterate all the elements in a constant
+	
+	Example:
+ 		const a= "Dwija"
+        for(let i in a){
+            document.write(a[i],"<br>")
+        }
+
+
+ 3. for of :- to iterate the arrays.
+
+	Example:
+ 		const b = ["abc","bcd","cde"]
+        for(let bb of b){
+            document.write(bb,"<br>")
+        }
+
+
+ 4. while :- infinite loop
+	
+	syntax:- 
+		while(condition){
+			block of code
+		}
+
+	Example:
+		 let n=5, i=1
+        while(i<=5){
+            document.write(i)
+            i++
+        }
+
+ 
+	Example:
+		 let n=8, i=2
+        while(i<=n){
+            document.write(i+1)
+            i=i+2
+        }
+	
+	//i= 2 , i+2= 2+2=4 , 4+2=6 , 6+2=8
+	//i+1= 2+1=3 , 4+1=5 , 6+1=7 , 8+1=9
+	//output:- 3,5,7,9
+
+
+ 5. do while : - to execute a block of code atleast for once
+
+	Example:-
+		let c=0
+        do{
+            document.write("count : "+c, "<br>")
+            c++
+        }while(c<5)
+
+Break:- to stop the iteration
+
+	Example:- 
+		for(let i=1; i<=8; i=i+1){
+            if(i==4){
+                break
+            }
+            document.write(i)
+        }
+
+	
+	Example:-
+		for(let i=2; i<=8; i=i+2){
+            		if(i>4){
+                	break
+            		}
+            		document.write(i+1)
+        	}
+
+
+Continue:- to skip the condition
+
+	Example:- 
+		 for(let i=2; i<=8; i=i+2){
+            		if(i>4){
+                	continue            		}
+            		document.write(i+1)
+        	}
+
+
