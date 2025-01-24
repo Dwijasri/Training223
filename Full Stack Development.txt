@@ -486,3 +486,61 @@ code:- for(let i=1; i<=5; 1++){
             document.write("<br>")
         }
 
+
+
+Day 12:-
+Functions:
+	A function is a reusable block of code (write once and can run multiple times)
+Key word - function
+parameters = values or variables which are declared inside the () while defining a function
+Arguments = values which are passed through the parameters at the time of calling the function
+
+Example:
+
+function greet(){
+            document.write("Hi!","<br>")
+        }
+        greet()
+        document.write("Hi user","<br>")
+        greet()
+
+
+Example:
+
+function g(name){
+            console.log( "hello "+ name)
+        }
+        let name=prompt("Enter name")
+        g(name)
+
+Example:
+
+ let num1=parseInt(prompt("Enter num 1"))
+        let num2=parseInt(prompt("Enter num 2"))
+        function add(num1,num2){
+            document.write(num1+num2)
+        }
+        add(num1,num2)
+
+
+Return:
+the return statement can be used to return the value to function call
+
+Example:
+function a(aa,bb){
+             return aa+bb
+         }
+        // let n1=parseInt(prompt("num 1"))
+        // let n2=parseInt(prompt("num 2"))
+        // let result=a(n1,n2)
+        // document.write(result)
+
+Q) program to check whether number is prime
+Q) Fibonacci series :- 0 1 1 2 3 5 8 13
+Q) leap year
+Q) Armstrong number 
+Q) palindrome :- 1223221
+Q) pattern
+
+
+
