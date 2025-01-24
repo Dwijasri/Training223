@@ -1,0 +1,76 @@
+Arrow Functions:- 
+1. Es6 version - more readable and more structured ; anonymous functions ; no name for function but are assigned to a variable.
+
+Example:- Arrow function without parameter
+	
+	let c=()=>{
+            document.write("Hello")
+        }
+        c()
+
+Example:- Arrow function with parameter
+
+	let a=(x,y)=>{
+            document.write(x+y,"<br>")
+        }
+        a(20,30)
+        a(40,50)
+
+Example:- Arrow functions with one argument
+
+	let a=x=>document.write(x)
+        a("Konnechiwa")
+
+Example:- Arrow functions without argument
+
+	let a=()=>document.write("Hola")
+        a()
+
+Example:- Arroe functions as an expression
+
+	let age=8
+        let a=(age<18)?
+        ()=>document.write("yonger"):       
+        ()=>document.write("older")
+        a()
+
+Synchronous function:- Execute step by step
+
+	function task1(){
+            document.write("1-done","<br>")
+        }
+
+        function task2(){
+            document.write("2-done","<br>")
+        }
+
+        function task3(){
+            document.write("3-done","<br>")
+        }
+        task1()
+        task2()
+        task3()
+
+Asynchronous function:- Execute multiple tasks
+
+	document.write("yo","<br>")
+        
+        setTimeout(()=>{
+            document.write("waiting...","<br>")
+        },3000)
+        document.write("sh")
+
+Callback functions:- is an function passed as argument to another function
+
+Example:-
+
+	function a(name, callback){
+            document.write("hello,"+name+", ")
+            callback()
+        }
+
+        function z(){
+            document.write("bye")
+        }
+
+        a("sam", z)
