@@ -1,0 +1,41 @@
+Callback functions:- is an function passed as argument to another function
+
+Example:-
+
+	function a(name, callback){
+            document.write("hello,"+name+", ")
+            callback()
+        }
+
+        function z(){
+            document.write("bye")
+        }
+
+        a("sam", z)
+
+Example:- callback function as anonymous function
+
+	function mainFunction(name, callback){
+            document.write("hello"+name, "<br>")
+            callback()
+        }
+        mainFunction("Dwija",function(){
+            document.write("Artist")
+        })
+
+
+Example:- asynchronous callback with setTimeout
+
+	function fetchData(callback){
+            document.write("Fetching data")
+        setTimeout(function(){
+            document.write("Data fetched","<br>")
+            callback()
+        },2000)
+        }
+        function processData(){
+            document.write("Processing")
+        }
+
+        fetchData(processData)
+
