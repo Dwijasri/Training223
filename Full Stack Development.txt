@@ -572,7 +572,7 @@ Example:- Arrow functions without argument
 	let a=()=>document.write("Hola")
         a()
 
-Example:- Arroe functions as an expression
+Example:- Arrow functions as an expression
 
 	let age=8
         let a=(age<18)?
@@ -606,6 +606,10 @@ Asynchronous function:- Execute multiple tasks
         },3000)
         document.write("sh")
 
+
+
+Day 14:-
+
 Callback functions:- is an function passed as argument to another function
 
 Example:-
@@ -620,4 +624,97 @@ Example:-
         }
 
         a("sam", z)
+
+Example:- callback function as anonymous function
+
+	function mainFunction(name, callback){
+            document.write("hello"+name, "<br>")
+            callback()
+        }
+        mainFunction("Dwija",function(){
+            document.write("Artist")
+        })
+
+
+Example:- asynchronous callback with setTimeout
+
+	function fetchData(callback){
+            document.write("Fetching data")
+        setTimeout(function(){
+            document.write("Data fetched","<br>")
+            callback()
+        },2000)
+        }
+        function processData(){
+            document.write("Processing")
+        }
+
+        fetchData(processData)
+
+
+Day 15:-
+
+Promise in javascript: it is a special javascript object that represents eventual completion or failure, of an asynchronous operation.
+
+Promises can be of three states:
+1. Pending: the initial state, the promise is still waiting for the operation to complete to finish.
+2. Fulfilled: the operation completed successfully.
+3. Rejected: the operation falied.
+
+
+To create a promise: new promise();
+the promise constructor takes a function with two parameters: resolve and reject
+resolve - to mark as the promise is successful
+reject - to mark as failed
+
+Handling the promise: .then() method and .catch() method
+.then()- called whrn promise is fulfilled, it receives the result from the resolve.
+.catch()- called when the promise is rejected, it receives the result from the reject.
+
+
+Example:
+	
+	let a= new Promise((resolve, reject)=>{
+            let success=true
+            if(success){
+                resolve('successful')
+            }
+            else{
+                reject("failed")
+            }
+        });
+        a
+        .then(result=>{
+            document.write(result)
+        })
+        .catch(error=>{
+            document.write(error)
+        })
+
+
+Chaining promises: 
+
+Example:
+
+	let a=new Promise((resolve, reject)=>{
+            resolve(5);
+        })
+        a
+        .then(result=>{
+            document.write(result)
+            return result*2
+        })
+        .then(result=>{
+            document.write(result)
+            return result+3
+        })
+        .then(result=>{
+            document.write(result)
+        })
+        .catch(error=>{
+            document.write(error)
+        })
+
+Example: promise with setTimeout
+
 
