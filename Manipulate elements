@@ -1,0 +1,71 @@
+Get Element by Class name
+ returns all the elements having the same class name. getElementbyClassName() method returns html collection object.
+
+a html collection is array like list of html elements. length property provides the size of the collection.
+
+Example:-
+
+	<body>
+    <h1 class="a">Hello</h1>
+    <h1 class="b">Bonjour</h1>
+    <h1 class="c">Hola</h1>
+    <script>
+        let x=document.getElementsByClassName("a")
+        //document.write(x)
+
+        for(let i=0; i<x.length;i++){
+            console.log(x[i])
+        }
+    </script>
+</body>
+
+
+Getting element by tagname:-
+
+method used is GetElementbyTagName(), it takes a tag name as string
+
+Example:-
+
+	let x=document.getElementsByTagName("h1")
+        //document.write(x)
+
+        for(let i=0; i<x.length;i++){
+            console.log(x[i])
+
+
+Queryselector: - used to select html elements by class name or tagname
+
+Example:-
+	
+	let x=document.querySelector("h1")
+        console.log(x)
+
+QuerySelectorAll:- used to select html elements by class name or tagname, returns in the form of nodeList.
+
+Example:-
+
+	let x=document.querySelectorAll("h1")
+        console.log(x)
+
+
+Manipulate elements:-
+to create a html element : createElement() is used
+
+Example:-
+
+	 let d=document.createElement("h2")
+        d.className="dd"
+        d.textContent="d for dwija"
+        console.log(d)
+	document.body.appendChild(d)
+
+Example:-
+
+	const colors=['blue','black','red']
+        for(let i=0;i<colors.length;i++){
+            let t=document.createElement("h2")
+            t.className="d"
+            t.textContent=colors[i]
+            
+            console.log(t)
+        }
