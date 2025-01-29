@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="a">Hello</h1>
+    <h1 class="b">Bonjour</h1>
+    <h1 class="c">Hola</h1>
+    <script>
+        // let x=document.getElementsByTagName("h1")
+        // document.write(x)
+
+        // for(let i=0; i<x.length;i++){
+        //     console.log(x[i])
+        // }
+
+        // let x=document.querySelector("h1")
+        // console.log(x)
+
+        // let x=document.querySelectorAll("h1")
+        // console.log(x)
+
+        // let d=document.createElement("h2")
+        // d.className="dd"
+        // d.textContent="d for dwija"
+        // console.log(d)
+        // document.body.appendChild(d)
+
+        const colors=['blue','black','red']
+        for(let i=0;i<colors.length;i++){
+            let t=document.createElement("h2")
+            t.className="d"
+            t.textContent=colors[i]
+            
+            console.log(t)
+        }
+    </script>
+</body>
+</html>
