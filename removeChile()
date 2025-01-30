@@ -1,0 +1,51 @@
+1. create element
+2. single elements
+3. multiple elements
+
+removeChild() - removes child elements from parent node
+
+Example:- 
+
+<body>
+    <h1>Removing childNode</h1>
+    <h2>hyd</h2>
+    <ul>
+        <li>Black</li>
+        <li>White</li>
+        <li>rainbow</li>
+    </ul>
+    <script>
+        const ul=document.querySelector("ul")
+        const lists=document.querySelectorAll("li")
+        // console.log(ul)
+        // console.log(lists)
+        for(const list of lists){
+            console.log(`Removing: ${list.textContent}`)
+            ul.removeChild(list)
+            console.log(lists)
+            //console.log(list)
+        }
+    </script>
+</body>
+
+
+Example:- .appendChild()
+	
+<body>
+	<div id="a">
+        <h1>Subjects</h1>
+    </div>
+    <div id="b">
+        <h1>Impt</h1>
+    </div>
+
+<script>
+        
+        let n=document.createElement('b')
+        n.textContent="star"
+
+        let p =document.getElementById('b')
+        p.appendChild(n)
+        console.log(p.innerText)
+    </script>
+</body>
