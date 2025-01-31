@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="a">
+        <h1 id="d">Hi</h1>
+        <h1>world</h1>
+    </div>
+    <div id="b">
+        <h2 id="r">2</h2>
+        <h2>3</h2>
+    </div>
+    <script>
+        let n=document.createElement('h2')
+        n.textContent='1'
+
+        let p=document.getElementById('b')
+        let l=document.getElementById('r')
+
+        p.insertBefore(n,l)
+
+        let m=document.createElement('h1')
+        m.textContent="Dwija says"
+
+        let q=document.getElementById('a')
+        let k = document.getElementById('d')
+
+        q.insertBefore(m,k)
+    </script>
+</body>
+</html>
