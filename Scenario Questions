@@ -1,0 +1,64 @@
+
+1. JavaScript
+2. React JS
+3. frontend - projects
+4. springboot - java
+5. MySQL
+6. Material UI
+7. End-End javascript
+
+
+
+Senario 1: Voting eligibility system
+
+You are tasked with building a system to check whether a person is eligible to vote. the system follows these rules:
+
+1.A person must be at least 18 years old to vote
+2.If the person is a citizen, they are eligible to vote
+3.If the person is not a citizen, but has passed the citizenship test then they are eligible to vote
+4.If the person is under 18, they cannot vote
+
+        let age = parseInt(prompt("Enter age: "))
+        let citizen = prompt("Are you a citizen (Yes/No) ? ")
+        if(age>18 && citizen=='Yes'){
+            document.write("Eligible to vote")
+        }
+        else if(citizen=="No"){
+            let test= prompt("Did you pass the citizenship test (Yes/No) ?")
+            if(test=="Yes"){
+                document.write("Eligible to vote")
+            }
+            else{
+                document.write("Not eligible to vote")
+            }
+        }
+        if(age<18){
+            document.write("Not eligible to vote")
+        }
+
+
+Scenario 2: Discount
+
+let amount_spent=parseFloat(prompt("Enter amount spent: "))
+        let premimum=prompt("Are you a premium member (Yes/No)?")
+        if(amount_spent>100 && premimum=="No"){
+            let dicsount=amount_spent*0.2
+            let price=amount_spent-dicsount
+            document.write("Price after discount "+price)
+        }
+        else if((amount_spent>50 && amount_spent<=100) && premimum=="No"){
+            let dicsount=amount_spent*0.1
+            let price=amount_spent-dicsount
+            document.write("Price after discount "+price)
+        }
+        else if(amount_spent>100 && premimum=='Yes'){
+            let dicsount=amount_spent*0.25
+            let price=amount_spent-dicsount
+            document.write("Price after discount "+price)
+        }
+        else if((amount_spent>50 && amount_spent<=100) && premimum=="Yes"){
+            let dicsount=amount_spent*0.15
+            let price=amount_spent-dicsount
+            document.write("Price after discount "+price)
+        }
+
