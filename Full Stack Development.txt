@@ -857,3 +857,65 @@ Example:- .appendChild()
         console.log(p.innerText)
     </script>
 </body>
+
+
+
+Day 21:-
+
+DOM methods:
+	
+	insertBefore():- used to insert a new node before an existing node as child node of a specified parent.
+
+	Requires a reference to both the new node and existing node you want to insert before.
+
+Example:-
+
+<body>
+    <div id="a">
+        <h1>Hi</h1>
+        <h1>world</h1>
+    </div>
+    <div id="b">
+        <h2 id="r">2</h2>
+        <h2>3</h2>
+    </div>
+    <script>
+        let n=document.createElement('h2')
+        n.textContent='1'
+
+        let p=document.getElementById('b')
+        let l=document.getElementById('r')
+
+        p.insertBefore(n,l)
+    </script>
+</body>
+
+Example:-
+
+<body>
+    <div id="a">
+        <h1 id="d">Hi</h1>
+        <h1>world</h1>
+    </div>
+    <div id="b">
+        <h2 id="r">2</h2>
+        <h2>3</h2>
+    </div>
+    <script>
+        let n=document.createElement('h2')
+        n.textContent='1'
+
+        let p=document.getElementById('b')
+        let l=document.getElementById('r')
+
+        p.insertBefore(n,l)
+
+        let m=document.createElement('h1')
+        m.textContent="Dwija says"
+
+        let q=document.getElementById('a')
+        let k = document.getElementById('d')
+
+        q.insertBefore(m,k)
+    </script>
+</body>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let age = parseInt(prompt("Enter age: "))
+        // let citizen = prompt("Are you a citizen (Yes/No) ? ")
+        // if(age>18 && citizen=='Yes'){
+        //     document.write("Eligible to vote")
+        // }
+        // else if(citizen=="No"){
+        //     let test= prompt("Did you pass the citizenship test (Yes/No) ?")
+        //     if(test=="Yes"){
+        //         document.write("Eligible to vote")
+        //     }
+        //     else{
+        //         document.write("Not eligible to vote")
+        //     }
+        // }
+        // if(age<18){
+        //     document.write("Not eligible to vote")
+        // }
+        
+        let amount_spent=parseFloat(prompt("Enter amount spent: "))
+        let premimum=prompt("Are you a premium member (Yes/No)?")
+        if(amount_spent>100 && premimum=="No"){
+            let dicsount=amount_spent*0.2
+            let price=amount_spent-dicsount
+            document.write("Price after discount "+price)
+        }
+        else if((amount_spent>50 && amount_spent<=100) && premimum=="No"){
+            let dicsount=amount_spent*0.1
+            let price=amount_spent-dicsount
+            document.write("Price after discount "+price)
+        }
+        else if(amount_spent>100 && premimum=='Yes'){
+            let dicsount=amount_spent*0.25
+            let price=amount_spent-dicsount
+            document.write("Price after discount "+price)
+        }
+        else if((amount_spent>50 && amount_spent<=100) && premimum=="Yes"){
+            let dicsount=amount_spent*0.15
+            let price=amount_spent-dicsount
+            document.write("Price after discount "+price)
+        }
+    </script>
+</body>
+</html>
