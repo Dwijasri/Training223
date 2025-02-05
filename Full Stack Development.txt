@@ -989,3 +989,140 @@ let amount_spent=parseFloat(prompt("Enter amount spent: "))
             document.write("Price after discount "+price)
         }
 
+
+
+
+Day 23:-
+
+React JS - a javascript library.It is divided into components and updating is easy.
+
+ node -v
+v20.11.0
+ npm -v
+10.2.4
+ npx create-react-app new-app
+
+Creating a new React app in C:\Users\Micro\OneDrive\Desktop\training\react\new-app.
+
+
+
+
+Day 24:-
+
+a.js:
+
+
+const b=React.createElement(
+    'h1',{id:'a'}, "I am Dwija"
+);
+const element=document.getElementById('r')
+const root=ReactDOM.createRoot(element)
+root.render(b)
+
+
+a.html:
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="a.js"></script>
+</body>
+</html>
+
+
+
+Jsx:-
+
+JavaScript Xml
+It is a syntax extension for Js
+
+
+To create an element in react Js React.cerateElement() method
+
+Syntax:
+Type=tag name(h1, p, div)
+Prop=class, id
+ReactDOM.createRoot()
+
+
+Jsx allows us to wite HTML code in JS. jsx all html tags must be closed. jsx compiles the html code to js.  Babel is a tool in jsx.
+
+
+Example:
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id='a'></div>
+    <script type="text/babel">
+        const element=<h1 className="aa">Welcome to MRU</h1>
+        const e=document.getElementById('a')
+        const root=ReactDOM.createRoot(e)
+        root.render(element)
+    </script>
+    <!-- <script >
+        const b=React.createElement("h1", {id:'c'}, "I am Dwijasri")
+        const e=document.getElementById('a')
+        const root=ReactDOM.createRoot(e)
+        root.render(b)
+    </script> -->
+</body>
+</html>
+
+Example:
+
+
+<script type="text/babel">
+        // const n=12
+        // const m=<h1>multiply by 10={n*10}</h1>
+        // //const element=<h1 className="aa">Welcome to MRU</h1>
+        // const e=document.getElementById('a')
+        // const root=ReactDOM.createRoot(e)
+        // root.render(m)
+        const App=()=>{
+            const isLoggedTrue=true;
+            return(
+            <div>
+                {isLoggedTrue? (<h1>Welcome </h1>):(<h1>Please Login</h1>)}
+                {isLoggedTrue &&<h1>New notification</h1>}
+            </div>
+        )
+        }
+        const root=ReactDOM.createRoot(document.getElementById('root'))
+        root.render(<App/>)
+    </script>
+
+Functions:
+using a function call directly within jsx.
+
+Example:
+<div id='a'></div>
+    <script type="text/babel">
+        function getGreeting(name){
+            return `Hello, ${name}! Welcome`
+        }
+        function Greeting(){
+            const name=`Dwija`
+            return <h1>{getGreeting(name)}</h1>
+        }
+        const root=ReactDOM.createRoot(document.getElementById('a'))
+        root.render(<Greeting/>)
+<script/>

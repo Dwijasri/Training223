@@ -9,14 +9,40 @@
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
-    <div id="app"></div>
+    <div id='a'></div>
     <script type="text/babel">
-        const n=10;
-        const m=9;
-        const element=<h1>Hello {n**3 + m**3}</h1>
-        const e=document.getElementById('app')
-        const root=ReactDOM.createRoot(e)
-        root.render(element)
+        function getGreeting(name){
+            return `Hello, ${name}! Welcome`
+        }
+        function Greeting(){
+            const name=`Dwija`
+            return <h1>{getGreeting(name)}</h1>
+        }
+        const root=ReactDOM.createRoot(document.getElementById('a'))
+        root.render(<Greeting/>)
+        // const n=12
+        // const m=<h1>multiply by 10={n*10}</h1>
+        // //const element=<h1 className="aa">Welcome to MRU</h1>
+        // const e=document.getElementById('a')
+        // const root=ReactDOM.createRoot(e)
+        // root.render(m)
+        // const App=()=>{
+        //     const isLoggedTrue=true;
+        //     return(
+        //     <div>
+        //         {isLoggedTrue? (<h1>Welcome </h1>):(<h1>Please Login</h1>)}
+        //         {isLoggedTrue &&<h1>New notification</h1>}
+        //     </div>
+        // )
+        // }
+        // const root=ReactDOM.createRoot(document.getElementById('root'))
+        // root.render(<App/>)
     </script>
+    <!-- <script >
+        const b=React.createElement("h1", {id:'c'}, "I am Dwijasri")
+        const e=document.getElementById('a')
+        const root=ReactDOM.createRoot(e)
+        root.render(b)
+    </script> -->
 </body>
 </html>
