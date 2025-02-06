@@ -1046,6 +1046,10 @@ JavaScript Xml
 It is a syntax extension for Js
 
 
+
+Day 25:-
+
+
 To create an element in react Js React.cerateElement() method
 
 Syntax:
@@ -1126,3 +1130,48 @@ Example:
         const root=ReactDOM.createRoot(document.getElementById('a'))
         root.render(<Greeting/>)
 <script/>
+
+
+
+Day 26:-
+
+
+React app
+
+index.html :- file is the entry point for the app
+index.js :- is the javascript entry point for the react app where dom is rendered.
+App.js :- main component
+
+components:- are the building blocks of react
+	-reusable code
+	-types: class ; functional.
+
+
+
+Example:-
+
+App.js:
+
+import React from "react";
+import './App.css'
+
+const Welcome=()=> <h1 className="message">Hello</h1>
+
+function App(){
+  return(
+    <div className="App">
+      <Welcome/>
+    </div>
+  )
+}
+export default App;
+
+App.css:
+
+.message{
+  color:blueviolet;
+  background-color: blanchedalmond;
+  font-size: 40px;
+  text-align: center;
+  
+}
