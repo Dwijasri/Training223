@@ -1175,3 +1175,14 @@ App.css:
   text-align: center;
   
 }
+
+
+
+
+Day 27:-
+
+map(): elements in array
+function will be applied to all the elements
+
+const n=[1,2,3,4,5]
+const d=n.map(num=>num*2)
