@@ -1,0 +1,49 @@
+React Reducer():
+A reducer is a unction that helps to update (score or list) based on action we take.
+-Current state: the current value of state
+-Action: add or remove an item
+
+
+
+Example:
+
+
+
+import React,{useReducer} from "react";
+
+function appleReducer(state={count:0, apples:[]},action){
+  switch(action.type){
+    case 'ADD_APPLE':
+      return {count: state.count+1, apples: [...state.apples, 'apple']};
+    case 'EAT_APPLE':
+      if(state.count > 0){
+        return {count: state.count-1, apples: state.apples.slice(0, -1)};
+      }
+      return state;
+    default:
+      return state;
+  }
+}
+function App() {
+  const [state,dispatch]=useReducer(appleReducer,{count:0, apples:[]})
+  return (
+    <div>
+      <h1>Chocolate counter</h1>
+      <p>Number of Chocolates:{state.count}</p>
+      <div>
+        {state.apples.map((apple, index) => (
+          <img key={index} src="https://tse4.mm.bing.net/th?id=OIP.vY9xacRUMHNEXlagqOM9rQHaFH&pid=Api&P=0&h=180"  />
+        ))}
+      </div>
+      <button onClick={()=>dispatch({type:'ADD_APPLE'})}>Add Chocolate</button>
+      <button onClick={()=>dispatch({type:'EAT_APPLE'})}>Eat Chocolate</button>
+    </div>
+  )
+}
+export default App;
+
+
+
+Callback in React:
+- in react, a callback is a function that is passed as an argument to another function
+- callbacks are often to communicate with different components
