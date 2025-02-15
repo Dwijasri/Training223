@@ -1,22 +1,93 @@
-import React, {useState} from 'react';
-import Child from './ChildA.js'
+import React, {useState, useEffect, useRef} from 'react'
 
-const Parent=()=>{
-  const[message,setMessage]=useState('Hello World')
+function CounterWithPrev(){
+  const[count,setCount]=useState(0);
+  const prevCountRef=useRef();
 
-  const changeMessage=()=>{
-    setMessage("Clicked the button");
-  };
-
-  return(
-    <div>
-      <h1>{message}</h1>
-      <Child changeMessage={changeMessage}/>
-    </div>
-  )
+  useEffect(()=>{
+    prevCountRef.current=count;
+  },[count])
+return(
+  <div>
+    <p>Current Count:{count}</p>
+    <p>PrevCount:{prevCountRef.current}</p>
+    <button onClick={()=>setCount(count+1)}>Increment</button>
+  </div>
+)
 }
+export default CounterWithPrev;
 
-export default Parent;
+
+// import React from "react";
+// import {ListProvider} from './ItemContext.js'
+// import AddItem from "./AddItem.js";
+// import ItemList from "./ItemList.js";
+
+// function App(){
+//   return(
+//     <ListProvider>
+//       <div>
+//       <h1>Item Management</h1>
+//       <AddItem/>
+//       <ItemList/>
+//     </div>
+//     </ListProvider>
+//   );
+// }
+
+// export default App();
+
+
+
+// import React, { createContext, useReducer } from 'react';
+
+// export const ListContext = createContext();
+
+// const initialState = [];
+
+// const listReducer = (state, action) => {
+//   switch (action.type) {
+//     case 'ADD_ITEM':
+//       return [...state, action.payload];
+//     case 'REMOVE_ITEM':
+//       return state.filter(item => item.id !== action.payload);
+//     default:
+//       return state;
+//   }
+// };
+
+// export const ListProvider = ({ children }) => {
+//   const [state, dispatch] = useReducer(listReducer, initialState);
+
+//   return (
+//     <ListContext.Provider value={{ state, dispatch }}>
+//       {children}
+//     </ListContext.Provider>
+//   );
+// };
+
+
+
+
+// import React, {useState} from 'react';
+// import Child from './ChildA.js'
+
+// const Parent=()=>{
+//   const[message,setMessage]=useState('Hello World')
+
+//   const changeMessage=()=>{
+//     setMessage("Clicked the button");
+//   };
+
+//   return(
+//     <div>
+//       <h1>{message}</h1>
+//       <Child changeMessage={changeMessage}/>
+//     </div>
+//   )
+// }
+
+// export default Parent;
 
 // import React,{useReducer} from "react";
 
